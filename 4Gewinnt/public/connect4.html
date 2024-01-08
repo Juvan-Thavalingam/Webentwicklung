@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vier gewinnt</title>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+<div class="menu">
+    <button type="button" id="save-bts" onclick="window.savegame()">Save Locale</button>
+    <button type="button" id="load-bts" onclick="window.loadgame()">Load Locale</button>
+    <button type="button" id="save-Server-bts" onclick="window.saveServergame()">Save on Server</button>
+    <button type="button" id="load-Server-bts" onclick="window.loadServergame()">Load from Server</button>
+    <button type="button" id="new-Game-bts" onclick="window.reset()">New Game</button>
+    <button type="button" id="undo-bts" onclick="window.undo()">Undo</button>
+    <span id="currentColor"></span>
+</div>
+<div class="app"></div>
+<script src="lib/suiweb.js" type="module"></script>
+<script src="connect4.js" type="module"></script>
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function () {
+        window.init();
+    }, false);
+</script>
+</body>
+</html>
